@@ -6,13 +6,13 @@ import dish.components.Milk;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
 
         Sandwich sandwich = new Sandwich("Sandwich test", Bread.WHITE_BREAD);
 
-        sandwich.addComponent("Jajko", 2);
-        sandwich.addComponent("Bekon", 3);
-        sandwich.addComponent("Majonez", 1);
+        sandwich.addComponent("Egg", 2);
+        sandwich.addComponent("Bacon", 3);
+        sandwich.addComponent("Lettuce", 2);
+        sandwich.addComponent("Mayo", 1);
 
         System.out.println(sandwich.getPrice());
 
@@ -21,11 +21,11 @@ public class Main {
         System.out.println("///////////////////////////////////////");
 
 
-        Oatmeal oatmeal = new Oatmeal("Oatmeal test", Milk.SOY_MILK);
+        Oatmeal oatmeal = new Oatmeal("Oatmeal test", Milk.MILK);
 
-        oatmeal.addComponent("Czekolada", 2);
-        oatmeal.addComponent("Masło orzechowe", 3);
-        oatmeal.addComponent("Banan", 2);
+        oatmeal.addComponent("Chocolate", 2);
+        oatmeal.addComponent("Peanut", 3);
+        oatmeal.addComponent("Banana", 2);
 
         System.out.println(oatmeal.getPrice());
 
@@ -40,13 +40,6 @@ public class Main {
         testOrder.addDishToOrder(oatmeal);
 
         OrderReaderModel.orderReader(testOrder);
-
-
-
-
-
-
-
 
     }
 }

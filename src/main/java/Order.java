@@ -21,20 +21,20 @@ public class Order {
     public boolean addDishToOrder(Dish dish) {
         if (dish != null) {
             dishes.add(dish);
-            System.out.println("Danie " + dish.getName() + " zostało dodane");
+            System.out.println("Dish " + dish.getName() + " has been added");
             return true;
         }
-        System.out.println("Dodawanie nie powiodło się");
+        System.out.println("Adding failed");
         return false;
     }
 
     public boolean removeDishFromList(Dish dish) {
         if (dish != null && dishes.contains(dish)) {
             dishes.remove(dish);
-            System.out.println("Danie" + dish.getName() + " zostało usunięte");
+            System.out.println("Dish" + dish.getName() + " has been removed");
             return true;
         }
-        System.out.println("Usuwanie nie powiodło się");
+        System.out.println("Deleting failed");
         return false;
     }
 

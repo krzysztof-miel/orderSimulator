@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public class Component {
-    String name = null;
-    double price = 0.0;
+    String name;
+    double price;
 
 
     public Component(String name, double price) {

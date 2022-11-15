@@ -28,7 +28,7 @@ public class Oatmeal  implements Dish{
     public boolean addComponent(String compName, double compPrice) {
         try {
             componentList.add(new Component(compName, compPrice));
-            System.out.println("Składnik " + compName + " został dodany do owsianki");
+            System.out.println("Component " + compName + " has been added");
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -44,7 +44,7 @@ public class Oatmeal  implements Dish{
                     .findAny()
                     .orElse(null);
             componentList.remove(temp);
-            System.out.println("Składnik został usunięty");
+            System.out.println("Component deleted");
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,7 +55,7 @@ public class Oatmeal  implements Dish{
     @Override
     public double getPrice() {
         price = milk.getPrice();
-        componentList.stream()
+        componentList
                 .forEach(component -> price += component.getPrice());
         return price;
     }

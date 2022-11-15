@@ -6,19 +6,6 @@ import java.util.List;
 
 public class DishReadModel {
 
-//    public static void sandwichReader(Sandwich sandwich) {
-//        System.out.println("Kanapka " + sandwich.getName() +
-//                " z " + getComponentsString(sandwich.getComponentList()) +
-//                " -> koszt: " + sandwich.getPrice());
-//    }
-//
-//    public static void oatmealReader(Oatmeal oatmeal) {
-//        System.out.println("Owsianka " + oatmeal.getName() +
-//                " z " + getComponentsString(oatmeal.getComponentList()) +
-//                " -> koszt: " + oatmeal.getPrice());
-//    }
-
-
     private static String getComponentsString(List<Component> compList) {
         String components = "";
 
@@ -32,13 +19,15 @@ public class DishReadModel {
 
     public static void dishReader(Dish dish) {
         if (dish.getClass() == Sandwich.class) {
-            System.out.println("Kanapka " + dish.getName() +
-                    " z " + getComponentsString(dish.getComponentList()) +
-                    " -> koszt: " + dish.getPrice());
+            System.out.println("Sandwich " + dish.getName() +
+                    " with " + getComponentsString(dish.getComponentList()) +
+                    " on " + ((Sandwich) dish).getBread() +
+                    " -> cost: " + dish.getPrice());
         }else {
-            System.out.println("Owsianka " + dish.getName() +
-                    " z " + getComponentsString(dish.getComponentList()) +
-                    " -> koszt: " + dish.getPrice());
+            System.out.println("Oatmeal " + dish.getName() +
+                    " with " + getComponentsString(dish.getComponentList()) +
+                    " on " + ((Oatmeal) dish).getMilk() +
+                    " -> cost: " + dish.getPrice());
         }
     }
 }
